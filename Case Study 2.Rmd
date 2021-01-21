@@ -1,0 +1,50 @@
+---
+title: "Case Study 2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What interests you? What are your passions?
+
+I'm very interested in social issues such as civil rights, cultural differences, climate change, poverty, religion, politics, etc. So, my questions will most likely involve these kinds of issues.
+
+1) I got this idea from a classmate who shared her topics. I want to explore the difference in career success between single vs. married people. Whether those that are single/not married are more successful in their careers as they have more time and energy to direct to their career or whether those that are married are more successful in their careers as they could have more motivation to work harder.
+
+There can be no conclusive statement made from my research as the articles generally talkled about the pros and cons of both perspectives. There were some that stated that being married led to greater success while some other articles stated that being single led to greater success. Some other articles said that both have their advantages and disadvantages.
+
+https://www.inc.com/john-eades/is-getting-married-or-staying-single-more-advantageous-to-career-success.html
+
+businessinsider.com/how-being-married-makes-you-more-successful-2016-7
+
+https://www.psychologytoday.com/us/blog/living-single/201612/marriage-vs-the-single-life-who-has-it-better
+
+2) Is there a difference in the happiness level of those who are from the suburbs compared to those who are from large metropolitan areas?
+I am from a large metropolitan area but have also lived in the suburbs. I have thought about whether I would like my future children to live in: the city or in the suburb. I want to know if there is a difference in the general people's happiness level between those two origination.
+
+Many of the research and articles on this topic showed that those from urban areas are, on average, happier than rural populations. The reasons may vary but can include higher living standards and better economic prospects.
+
+https://worldhappiness.report/ed/2020/urban-rural-happiness-differentials-across-the-world/
+
+https://www.wesmoss.com/news/are-people-happier-living-in-the-suburbs-or-the-city-the-research-is-in/
+
+3) Does participating in extracurricular activities (sports, music, etc) as a child correlate to later career success?
+I have participated in a few extracurricular activities when young and have seen its' benefits. I want to see if this was the same for others and for the general public.
+
+The answer is obvious in that it definitely leads to later career success, but the question is how much. How much it benefits teens in adulthood. I haven't been able to quite figure this question out yet.
+
+https://www.sciencedaily.com/releases/2009/03/090325132536.htm
+
+https://www.crimsoneducation.org/us/blog/extracurriculars/benefits-of-extracurricular-activities/
+
+https://aquila.usm.edu/cgi/viewcontent.cgi?article=1567&context=dissertations
+
+```{r cars}
+library(tidyverse)
+library(readr)
+library(pander)
+GSS2012 <- read_delim("../../Data/GSS2012.csv", 
+    "\t", escape_double = FALSE, trim_ws = TRUE)
+```
