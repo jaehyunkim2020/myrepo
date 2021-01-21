@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What interests you? What are your passions?
+## What interests you? What are your passions??
 
 I'm very interested in social issues such as civil rights, cultural differences, climate change, poverty, religion, politics, etc. So, my questions will most likely involve these kinds of issues.
 
