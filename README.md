@@ -3,13 +3,13 @@ This is a line from RStudio
 
 I want to go skydiving, cliff diving, or anything else exhilarating
 
-## **Notes from Task 5 reading**
+# **Notes from Task 5 reading**
 
 ggplot2 is one of the most elegant and most versatile out of all the graphs in R.
 
 The first argument of ggplot() is the dataset to use in the graph. So ggplot(data = mpg) creates an empty graph. The graph is completed by adding one or more layers to ggplot(). The function geom_point() adds a layer of points to the plot, which creates a scatterplot. ggplot2 comes with many geom functions that each add a different type of layer to a plot.
 
-# *Aesthetic mappings*
+## *Aesthetic mappings*
 
 Each geom function in ggplot2 takes a mapping argument which defines how variables in the dataset are mapped to visual properties. The mapping argument is always paired with aes(), and the x and y arguments of aes() specify which variables to map to the x and y axes. ggplot2 looks for the mapped variables in the data argument.
 
@@ -25,24 +25,24 @@ To map an aesthetic to a variable, associate the name of the aesthetic to the na
 
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
-# alpha controls the transparency of the points
+*(alpha controls the transparency of the points)*
 
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, shape = class))
-# shape controls the shape of the points
+*(shape controls the shape of the points)*
 
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
-# changes all the points in the plot to the color of blue. Needs to be outside the aes
+*(changes all the points in the plot to the color of blue. Needs to be outside the aes)*
   
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, stroke = cyl))
-# stroke defines the stroke thickness
+*(stroke defines the stroke thickness)*
   
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, colour = displ < 5))
   
-# *Facets*
+## *Facets*
 
 One way to add additional variables is with aesthetics. Another way, particularly useful for categorical variables, is to split your plot into facets, subplots that each display one subset of the data.
 
@@ -60,7 +60,7 @@ ggplot(data = mpg) +
 
 If you prefer to not facet in the rows or columns dimension, use a . instead of a variable name, e.g. + facet_grid(. ~ cyl).
 
-# *Geometric objects*
+## *Geometric objects*
 
 A *geom* is the geometrical object that a plot uses to represent data. To change the geom in your plot, change the geom function that you add to ggplot().
 
@@ -74,7 +74,7 @@ Every geom function in ggplot2 takes a mapping argument. However, not every aest
 
 ggplot(data = mpg) +
   geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))
-# Here geom_smooth() separates the cars into three lines based on their drv value, which describes a car's drivetrain. One line describes all of the points with a 4 value, one line describes all of the points with an f value, and one line describes all of the points with an r value.
+*(Here geom_smooth() separates the cars into three lines based on their drv value, which describes a car's drivetrain. One line describes all of the points with a 4 value, one line describes all of the points with an f value, and one line describes all of the points with an r value.)*
 
 ggplot2 provides over 40 geoms, and extension packages provide even more (see https://exts.ggplot2.tidyverse.org/gallery/ for a sampling). The best way to get a comprehensive overview is the ggplot2 cheatsheet, which you can find at http://rstudio.com/resources/cheatsheets. To learn more about any single geom, use help: ?geom_smooth.
 
